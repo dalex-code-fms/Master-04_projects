@@ -1,0 +1,12 @@
+package fr.fms.poo;
+
+public class TestCity {
+
+	public static void main(String[] args) {
+		City paris = new City("Paris", "France", 2.161000);
+		
+		paris.display();
+
+	}
+
+}

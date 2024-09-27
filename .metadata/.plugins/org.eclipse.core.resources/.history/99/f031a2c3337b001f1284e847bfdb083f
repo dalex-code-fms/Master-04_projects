@@ -1,0 +1,47 @@
+package fr.fms.entities;
+
+public class Ville {
+	private String city;
+	private String country;
+	private int nbInhabitants;
+
+	public Ville(String city, String country, int nbInhabitants) {
+		setCity(city);
+		setCountry(country);
+		setNbInhabitants(nbInhabitants);
+	}
+	
+	public Ville(String city, String country) {
+		setCity(city);
+		setCountry(country);
+	}
+	
+	public Ville(String city) {
+		setCity(city);
+	}
+	
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public int getNbInhabitants() {
+		return nbInhabitants;
+	}
+
+	public void setNbInhabitants(int nbInhabitants) {
+		this.nbInhabitants = nbInhabitants;
+	}	
+}

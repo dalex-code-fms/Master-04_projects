@@ -1,0 +1,21 @@
+package fr.fms.entities;
+
+public class Capitale extends Ville{
+	private String monument;
+	
+	public Capitale(String monument) {
+		setMonument(monument);
+	}
+
+	public String getMonument() {
+		return monument;
+	}
+
+	public void setMonument(String monument) {
+		this.monument = monument;
+	}
+	
+	public String toString() {
+		return String.format("monument : %s", monument);
+	}
+}

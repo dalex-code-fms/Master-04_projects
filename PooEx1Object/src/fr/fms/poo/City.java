@@ -1,0 +1,97 @@
+package fr.fms.poo;
+
+public class City {
+	/*public String city;
+	public String country;
+	public int nbInhabitants;*/
+	
+	/*public City(String city, String country, int nbInhabitants) {
+		this.city = city;
+		this.country = country;
+		this.nbInhabitants = nbInhabitants;
+	}
+	
+	public void display() {
+		System.out.printf("city : %s%ncountry : %s%nPopulation : %,d%n%n", city, country, nbInhabitants);
+	}*/
+	
+	private String city;
+	private String country;
+	private int nbInhabitants;
+	private static int counter;
+	
+	public City(String city, String country, int nbInhabitants) {
+		setCity(city);
+		setCountry(country);
+		setNbInhabitants(nbInhabitants);
+		counter++;
+	}
+	
+	public City(String city, String country) {
+		setCity(city);
+		setCountry(country);
+		setNbInhabitants(0);
+		counter++;
+	}
+	
+	public City(String city, int nbInhabitants) {
+		setCity(city);
+		setCountry("unknown");
+		setNbInhabitants(nbInhabitants);
+		counter++;
+	}
+	
+	public static int displayCounter() {
+		return counter;
+	}
+	
+	public String getCity() {
+		return city;
+	}
+	
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	public String getCountry() {
+		return country;
+	}
+	
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	
+	public int getNbInhabitants() {
+		return nbInhabitants;
+	}
+	
+	public void setNbInhabitants(int nbInhabitants) {
+		if(nbInhabitants < 0) 
+			throw new RuntimeException("The number of inhabitants can't be lower than 0");
+		this.nbInhabitants = nbInhabitants;		
+	}
+	
+	/*public void display() {
+		System.out.printf("[city : %s] [country : %s] [Population : %,d]%n", getCity(), getCountry(), getNbInhabitants());
+	}*/
+	
+	/*public void display() {
+		System.out.printf("City of %s in %s with a population of %,d%n", getCity(), getCountry(), getNbInhabitants());
+	}*/
+	
+	public String toString() {
+		return String.format("City of %s in %s with a population of %,d%n", getCity(), getCountry(), getNbInhabitants());
+	}
+	
+	public String displayCity() {
+		return String.format("City [city : %s] [country : %s] [Population : %,d]", getCity(), getCountry(), getNbInhabitants());
+	}
+	
+	public String displayBornCity() {
+		if (getNbInhabitants() <= 0) {
+			return String.format("Ville de Naissance : %s, %s", getCity(), getCountry());	
+		} else {
+			return String.format("Ville de Naissance : %s, %s, %,d", getCity(), getCountry(), getNbInhabitants());			
+		}
+	}
+}

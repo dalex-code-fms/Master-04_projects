@@ -1,0 +1,86 @@
+package fr.fms.poo;
+
+import java.util.ArrayList;
+
+public class Person {
+	private String lastName;
+	private String firstName;
+	private int age;
+	private String address;
+	private City city;
+	
+	public Person(String lastName, String firstName, int age, String address, City city) {
+		setLastName(lastName);
+		setFirstName(firstName);
+		setAge(age);
+		setAddress(address);
+		setCity(city);
+	}
+	
+	public Person(String lastName, String firstName, int age) {
+		setLastName(lastName);
+		setFirstName(firstName);
+		setAge(age);
+		setAddress("unknown");
+	}
+	
+	public Person(String lastName, String firstName) {
+		setLastName(lastName);
+		setFirstName(firstName);
+		setAge(0);
+		setAddress("unknown");
+	}
+	
+	public City getCity() {
+		return city;
+	}
+
+	public void setCity(City city) {
+		this.city = city;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	public String toString() {
+		if (this.city == null) {
+			return String.format("Person [lastName=%s, firstName=%s, age=%d, address=%s] Born%s", getLastName(), getFirstName(), getAge(), getAddress(), "null"); 
+		} else {
+			return String.format("Person [lastName=%s, firstName=%s, age=%d, address=%s] Born%s", getLastName(), getFirstName(), getAge(), getAddress(), city.displayCity());
+		}
+	}
+	
+	public void createPersonList() {
+		ArrayList<String> listOfPersons = new ArrayList<>();
+		listOfPersons.add(getLastName(), getFirstName(), Integer.toString(getAge()), getAddress());
+	}
+}

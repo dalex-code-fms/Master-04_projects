@@ -1,0 +1,54 @@
+package fr.fms.entities;
+
+public class Rectangle extends Shape{
+	private int width;
+	private int height;
+	private int screenWidth;
+	private int screenHeight;
+	
+	public Rectangle(int x, int y, int width, int height, int screenWidth, int screenHeight) {
+		super(x, y);
+		this.width = width;
+		this.height = height;
+		this.screenWidth = screenWidth;
+		this.screenHeight = screenHeight;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		if (width <= 0) this.width = 1;
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public int getScreenWidth() {
+		return screenWidth;
+	}
+
+	public void setScreenWidth(int screenWidth) {
+		this.screenWidth = screenWidth;
+	}
+
+	public int getScreenHeight() {
+		return screenHeight;
+	}
+
+	public void setScreenHeight(int screenHeight) {
+		this.screenHeight = screenHeight;
+	}
+
+	public void setHeight(int height) {
+		if (height <= 0) this.height = 1;
+		this.height = height;
+	}
+	
+	public String toString() {
+		return String.format("Width : %d Height: %d", screenWidth, screenHeight);
+	}
+}

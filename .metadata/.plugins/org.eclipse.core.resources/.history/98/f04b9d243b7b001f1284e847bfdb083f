@@ -1,0 +1,38 @@
+package fr.fms.entities;
+
+import java.util.ArrayList;
+
+public class TestEntities {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * 
+		 * exercise 3.6
+		 * 
+		 */
+		Personne gate = new Employe("Gate", "Bill", 65, "aux USA", new Capital("Washington", "W-M"), "Fondation B&M", 1000000);
+		Personne musk = new Employe("Musk", "Elon", 49, "à Palo Alto", new Capital("Pretoria", "Afrique du Sud"), "Tesla", 1500000);
+		Personne dupont = new Commerciale("Dupont", "Robert", 50, "rue des roisiers à Toulouse", new Capital("Limoges", "France"), "brico", 5.0);
+		
+		Personne[] arrOfEmployes = {gate, musk, dupont};
+		
+		for (int i = 0; i < arrOfEmployes.length; i++) System.out.println(arrOfEmployes[i]);
+		
+		System.out.println("---------------------------------------------------");
+		
+		ArrayList<Personne> listOfEmployes = new ArrayList<>();
+		listOfEmployes.add(gate);
+		listOfEmployes.add(musk);
+		listOfEmployes.add(dupont);
+		
+		listOfEmployes.forEach((value) -> 
+			System.out.println(value)
+		);
+		
+		System.out.println("---------------------------------------------------");
+		
+
+	}
+
+}

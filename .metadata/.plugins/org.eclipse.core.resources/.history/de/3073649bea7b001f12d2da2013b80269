@@ -1,0 +1,9 @@
+package fr.fms.entities;
+
+public class Shape {
+	private Point center;
+	
+	public Shape(int x, int y) {
+		this.center = new Point(x, y);
+	}
+}

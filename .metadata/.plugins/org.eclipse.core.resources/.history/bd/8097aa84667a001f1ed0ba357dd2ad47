@@ -1,0 +1,51 @@
+package fr.fms.poo;
+
+public class City {
+	public String city;
+	public String country;
+	public int nbInhabitants;
+	
+	/*public City(String city, String country, int nbInhabitants) {
+		this.city = city;
+		this.country = country;
+		this.nbInhabitants = nbInhabitants;
+	}
+	
+	public void display() {
+		System.out.printf("city : %s%ncountry : %s%nPopulation : %,d%n%n", city, country, nbInhabitants);
+	}*/
+	
+	public City(String city, String country, int nbInhabitants) {
+		setCity(city);
+		setCountry(country);
+		setNbInhabitants(nbInhabitants);
+	}
+	
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	public String getCity() {
+		return city;
+	}
+	
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	
+	public String getCoutry() {
+		return country;
+	}
+	
+	public void setNbInhabitants(int nbInhabitants) {
+		this.nbInhabitants = nbInhabitants;
+	}
+	
+	public int getNbInhabitants() {
+		return nbInhabitants;
+	}
+	
+	public void display() {
+		System.out.printf("city : %s%ncountry : %s%nPopulation : %,d%n%n", getCity(), getCoutry(), getNbInhabitants());
+	}
+}

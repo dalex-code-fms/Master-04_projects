@@ -1,0 +1,23 @@
+package fr.fms.graphic;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import javax.swing.JFrame;
+
+public class Graphic extends JFrame{
+	private static final long serialVersionUID = 1L;
+	
+	public Graphic() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setside(350, 250);
+		setLocationRelativeTo(null);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new Graphic();
+	}
+}

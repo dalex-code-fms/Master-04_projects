@@ -1,0 +1,6 @@
+package fr.fms.job;
+
+public interface Job {
+	public void addShape();
+	public void drawShape();
+}

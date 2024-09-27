@@ -1,0 +1,31 @@
+package fr.fms.entities;
+
+public class Circle extends Shape{
+	private double radius;
+	
+	public Circle(double radius, int x, int y) {
+		super(x, y);
+		setRadius(radius);
+	}
+
+	public double getRadius() {
+		return radius;
+	}
+
+	public void setRadius(double radius) {
+		if (radius <= 0) radius = 1;
+		this.radius = radius;
+	}
+	
+	public double area() {
+		return Math.PI * this.radius * this.radius;
+	}
+	
+	public double perimeter() {
+		return 2 * Math.PI * this.radius;
+	}
+	
+	public String toString() {
+		return String.format("Circle radius : %.1f %s", radius, super.toString());
+	}
+}

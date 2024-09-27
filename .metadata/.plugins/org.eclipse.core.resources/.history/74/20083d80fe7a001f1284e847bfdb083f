@@ -1,0 +1,30 @@
+package fr.fms.poo;
+
+/*
+ * 
+ * exercise 1.8, 2.0
+ * 
+ */
+
+public class TestPerson {
+
+	public static void main(String[] args) {
+		/*Person manu = new Person("Macron", "Emmanuel", 43, "Elyssee à Paris", new City("Amiens", "France"));
+		Person poutine = new Person("Poutine", "Vladimir", 68);
+		Person biden = new Person("Biden", "Joe");
+		
+		System.out.println(manu);
+		System.out.println(poutine);
+		System.out.println(biden);*/
+		
+		Person manu = new Person("Macron", "Emmanuel", 43, "Elysée à Paris", new City("Amiens", "France"));
+		Person sarkozy = new Person("Sarkozy", "Nicolas", 66, "Paris", new City("Paris", "France", 2000000));
+		Person johnson = new Person("Johnson", "Boris", 56, "Downing street à London", new City("New York", "Etats-Unis"));
+		Person depardieu = new Person("Depardieu", "Gerard", 72, "Moscou", new City("Châteauroux", "France"));
+		Person kravitz = new Person("Kravitz", "Lenny", 56, "Hotel particulier à Paris", new City("New York", "USA"));
+		Person lawrence = new Person("Lawrence", "Jennifer", 30, "Louisville aux USA", new City("Indian Hills", "USA"));
+		
+		manu.toString();
+		
+	}	
+}

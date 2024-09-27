@@ -1,0 +1,42 @@
+package fr.fms.poo;
+
+/*
+ * 
+ * exercise 1.1
+ * 
+ */
+
+/*	response to 1.2 - what to do if the user change the population of Toulouse from 47000 to 37000 ?
+ *
+ *	Private setter
+ *	Immutable Object
+ */
+
+public class TestCity {
+
+	public static void main(String[] args) {
+		City paris = new City("Paris", "France", 2161000);
+		City toulouse = new City("Toulouse", "France", 45000);
+		
+		/*paris.display();
+		toulouse.display();
+		
+		toulouse.nbInhabitants += 20000;
+		
+		toulouse.display();*/
+		
+		paris.display();
+		//toulouse.nbInhabitants = -200;
+		//toulouse.setNbInhabitants(-200);
+		
+		toulouse.setNbInhabitants(37000);
+		toulouse.display();
+		
+		City rabat = new City("Rabat", 577000);
+		rabat.display();
+		
+		rabat.setCountry("Maroc");
+		rabat.display();
+	}
+
+}

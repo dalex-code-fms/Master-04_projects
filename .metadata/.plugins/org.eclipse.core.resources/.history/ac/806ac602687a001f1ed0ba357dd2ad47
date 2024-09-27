@@ -1,0 +1,26 @@
+package fr.fms.poo;
+
+/*
+ * 
+ * exercise 1.1
+ * 
+ */
+
+public class TestCity {
+
+	public static void main(String[] args) {
+		City paris = new City("Paris", "France", 2161000);
+		City toulouse = new City("Toulouse", "France", 45000);
+		
+		paris.display();
+		toulouse.display();
+		
+		toulouse.nbInhabitants += 20000;
+		
+		toulouse.display();
+		
+		toulouse.nbInhabitants = -1000;
+		toulouse.display();
+	}
+
+}

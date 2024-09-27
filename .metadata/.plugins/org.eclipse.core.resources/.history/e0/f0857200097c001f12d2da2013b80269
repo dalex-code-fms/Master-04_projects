@@ -1,0 +1,26 @@
+package fr.fms.job;
+
+import java.util.ArrayList;
+
+import fr.fms.entities.Shape;
+import fr.fms.graphic.Graphic;
+
+public class JobImpl implements Job {
+	private ArrayList<Shape> shapes;
+	
+	public JobImpl() {
+		shapes = new ArrayList<>();
+	}
+	
+	public void addShape(Shape shape) {
+		shapes.add(shape);
+	}
+	
+	public Shape drawShape() {
+		Shape sp;
+		shapes.forEach((shape) -> {
+			sp = shape;
+		});
+		return sp;
+	}
+}

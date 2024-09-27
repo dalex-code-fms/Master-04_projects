@@ -1,0 +1,17 @@
+package fr.fms.poo;
+
+public class City {
+	public String city;
+	public String country;
+	public int nbPopulation;
+	
+	public City(String city, String country, int nbPopulation) {
+		this.city = city;
+		this.country = country;
+		this.nbPopulation = nbPopulation;
+	}
+	
+	public void display() {
+		System.out.printf("city : %s%ncountry : %s%nPopulation : %.d%n%n", city, country, nbPopulation);
+	}
+}

@@ -1,0 +1,22 @@
+package fr.fms.entities;
+
+public class Commerciale extends Employe{
+	private double ca;
+	
+	public Commerciale(String lastName, String firstName, int age, String liveIn, Capital capital, String enterprise, double ca) {
+		super(lastName, firstName, age, liveIn, capital, enterprise);
+		setCa(ca);
+	}
+
+	public double getCa() {
+		return ca;
+	}
+
+	public void setCa(double ca) {
+		this.ca = ca;
+	}
+	
+	public String toString() {
+		return String.format("%s, %s, %dans, habitant %s, Ville de naissance : %s, Enterprise : %s, % CA : %f", getLastName(), getFirstName(), getAge(), getLiveIn(), getCapital(), getEnterprise(), ca);
+	}
+}

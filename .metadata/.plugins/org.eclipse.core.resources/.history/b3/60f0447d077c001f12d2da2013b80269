@@ -1,0 +1,11 @@
+package fr.fms.entities;
+
+import fr.fms.graphic.Graphic;
+
+public class Shape{
+	private Point center;
+	
+	public Shape(int x, int y) {
+		this.center = new Point(x, y);
+	}
+}
